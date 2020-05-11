@@ -56,15 +56,15 @@ for i=1:length(all_folders)
         volsToResize = [volsToResize; currentVol];
     end
     
-    % set Shen atlas as reference image ADD PROPER REFERENCE TO SHEN ATLAS
-    matlabbatch{1}.spm.spatial.coreg.write.ref = {'A:\extractionTest\shen_2mm_268_parcellation.nii,1'};
+    % set Shen atlas as reference image 
+    matlabbatch{1}.spm.spatial.coreg.write.ref = {'A:\shen_2mm_268_parcellation.nii,1'};
     % provide list of preprocessed volumes
     matlabbatch{1}.spm.spatial.coreg.write.source = volsToResize;
-    % interpolation with 4th Degree B-Spline 
+    % interpolation with 4th Degree B-Spline - Default setting
     matlabbatch{1}.spm.spatial.coreg.write.roptions.interp = 4;
-    % No wrapping
+    % No wrapping - Default setting
     matlabbatch{1}.spm.spatial.coreg.write.roptions.wrap = [0 0 0];
-    % No masking
+    % No masking - Default setting
     matlabbatch{1}.spm.spatial.coreg.write.roptions.mask = 0;
     % Prefix resliced 3D volumes with r
     matlabbatch{1}.spm.spatial.coreg.write.roptions.prefix = 'r';
