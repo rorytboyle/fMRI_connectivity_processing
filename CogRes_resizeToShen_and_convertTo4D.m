@@ -80,3 +80,4 @@ for i=1:length(all_folders)
     spm_jobman('run',matlabbatch);
     clear matlabbatch
 end
+toc % get runtime
