@@ -8,7 +8,7 @@ https://bioimagesuiteweb.github.io/bisweb-manual/CommandLineTools.html
 Only include the 4d timeseries .nii images in your output directory.
 
 Note: these lines of code were ran separately in the Windows Powershell, the full script was
-note executed.
+not executed.
 
 Author: Rory Boyle rorytboyle@gmail.com
 Date: 13/05/2020
