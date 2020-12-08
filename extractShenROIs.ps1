@@ -18,7 +18,7 @@ Date: 13/05/2020
 Set-Location "A:\ROI_timeseries"
 
 # Read in files from input directory
-$files = Get-ChildItem -Path 'A:\preprocessed_4D_timeseries' -Recurse -Include *.nii
+$files = Get-ChildItem -Path 'A:\temporal_smoothed_Shen' -Recurse -Include *.nii
 
 # Loop through files, get subid, call biswebnode and compute ROIs, save output as subid_timeseries.csv
 foreach($file in $files){$subid = $file.Name.Substring(0,7); biswebnode computeroi -i $file.fullname -r A:\shen_2mm_268_parcellation.nii -o $subid’_timeseries.csv’}
